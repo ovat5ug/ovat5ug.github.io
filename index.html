@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Juego Ahorcado</title>
+    <link rel="stylesheet" href="css/reset.css">  
+    <link rel="stylesheet" href="css/logos.css">
+    <link rel="stylesheet" href="css/postik.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">   
+</head>
+<body>
+    
+    <div class="postik" height="60px" width="60px">
+        <ul>
+            <li>
+              <ah class="a">
+                <h2>CHALLANGE</h2>
+                <p>Reto del Proyecto Alura Latam y Oracle Next Education; Juego de Ahorcado</p>
+              </ah>
+            </li>
+            <li>
+              <ah class="a">
+                <h2>Presentación</h2>
+                <p>Soy Gustavo Pérez, en el presente proyecto expongo la aplicacion del mismo usando CSS3, HTML5 Y JS.</p>
+              </ah>
+            </li>
+            <li>
+              <ah class="a">
+                <h2>Contactos</h2>
+                <p>Puedes encontrarme en:</p>
+                <p><a href="https://www.linkedin.com/in/ovat5ug/">linkedin</a> </p> 
+                <p><a href="https://app.aluracursos.com/user/ovat5ug">Perfil Alura</a></p> 
+                <p><a href="https://github.com/ovat5ug/ORACLE-ONE/tree/main/proyecto_encriptar">Proyecto GitHub</a> </p> 
+                                           
+              </ah>
+            </li>
+          </ul>
+    </div>
+    <header>
+        
+        <div class="contenedor-imagen01" class="contenedor-dimension-imagen">
+            <img height="60px" width="60px" src="assets/img/alura-share.png" alt="Logo_Alura"> 
+            <br>
+        </div>
+        <div class="contenedor-imagen02" class="contenedor-dimension-imagen">
+            <img height="40px" width="40px" src="assets/img/X.png" alt="Logo_Alura"> 
+            <br>
+        </div>
+        
+        <div class="contenedor-imagen03" class="contenedor-dimension-imagen">
+            <img class="" height="60px" width="60px" src="assets/img/oracle.png" alt="">
+        </div> 
+        <div class="contenedor-imagen04" class="contenedor-dimension-imagen">
+            <img height="40px" width="40px" src="assets/img/X.png" alt="Logo_Alura"> 
+            <br>
+        </div>
+        <div class="contenedor-imagen05" class="contenedor-dimension-imagen">
+            <img class="" height="60px" width="60px" src="assets/img/LOGO_GUSTAV0_B.png" alt="">
+        </div>      
+    </header>
+    
+    <div class="maniqui-ahorcado">
+        <img id="maniqui" class="maniquis" alt="Ahorcado"/>
+    </div>
+    <div class="adivinado">
+        <!--<span class="letra acertada">A</span>
+        <span class="letra acertada">L</span>
+        <span class="letra acertada">U</span>
+        <span class="letra acertada"></span>
+        <span class="letra acertada"></span>-->
+    </div>
+    <div class="equivocado">
+        <!--<span class="letra equivocada">B</span>
+        <span class="letra equivocada">J</span>
+        <span class="letra equivocada">K</span>
+        <span class="letra equivocada">C</span>-->
+    </div>
+    <form class="botones" action="javascript:void(0)"><!--"javascript:void(0)" el formulario no debe recargarse en la misma pagina por lo que no es enviado a nunguna parte-->
+        <input type="button" class="boton1" value="Nuevo Juego" onclick="nuevogame()"/>
+        <input type="button" class="boton2" value="Desistir"/>
+    </form>   
+    <script src="js/ahorcado.js"></script><!--si el archivo "js/ahorcado.js" se ubica debajo de la etiqueta body
+genera el siguiente error, "Uncaught TypeError: Cannot set properties of null (setting 'src')"
+basicamente sucede porue no puedes ejecutar un script sin antes haber creado las etiquetas, clases o id
+a la cual estas haciendo referencia que afectara en el "HTML"-->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+body{
+    text-align: center;
+    background-color: #f3f5fc;
+    background: url("https://indaloinnovation.com/wp-content/uploads/2021/09/1_JuXKZEpwgOfQvvSsX0UhGg.png");
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: 16px;
+}
+#maniqui{
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;    
+    width: 17rem;/*equivalente a '17 * "font-size: 16px;"'*/
+    height: 17rem;/*equivalente a '17 * "font-size: 16px;"'*/
+    border: solid 1px #0a3871;
+    background-image: rgb(255, 0, 0);
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 60%;
+}
+div img.maniquis{
+    margin-top: 7%;
+    width: 80%;
+    height: 50%;
+    border: none;
+    color: rgba(0, 0, 0, 0.933);
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1em;
+    background-color: rgba(248, 251, 254, 0.219);
+    place-content: red;
+    margin: auto;
+    resize: none;
+    outline: none;
+}
+.maniqui-ahorcado{
+    width: 100vw;/*equivalente a "width: 100%;"*/
+    text-align: center;
+    height: 40vh;/*equivalente a "height: 40%;"*/
+    margin-top: 7rem;/*equivalente a '7 * "font-size: 16px;"'*/
+    margin-bottom: 3rem;
+    max-height: 17rem;
+    /*border: solid 1px;
+    background-color: blueviolet;*/    
+}
+.adivinado{
+    text-align: center;
+    font-size: 2rem;
+    color: #242d34;
+}
+.letra{
+    display: inline-block;    
+    vertical-align: middle;    
+    text-align: center;
+}
+.acertada{    
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    stroke-width: #000000, 20px;
+    border-bottom: solid 4px #ffffff;
+    margin-left: 0.5rem;
+    line-height: 4.5rem;
+}
+.equivocado{
+    text-align: center;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    stroke-width: #242d34, 20px;
+}
+.equivocada{
+    margin-left: 1rem;
+}
+[type="button"]{
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #0a3871 solid 1px;
+    cursor: pointer;
+    color: #0a3871;    
+    background: inherit;/*quitar el fondo de los botones*/
+}
+.botones{
+    text-align: center;
+    margin-top: 3rem;
+}
+.boton1{
+    background-color: #0a3871;
+    color: #f3f5fc;
+    border-color: #000000;
+}
+
+.boton2{
+    background-color: #f3f5fc;
+    color: #0a3871;
+    border-color: #000000;
+}
+
+
+/*responsivo*/
+@media only screen and (max-width: 700px){
+    #maniqui{
+        margin-top: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 60%;
+    }
+  }

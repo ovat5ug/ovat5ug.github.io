@@ -1,0 +1,89 @@
+/*LOGOS*/
+
+header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5em;
+    margin-left: 4em;
+    margin-right: 0;
+ }
+
+div.contenedor-imagen01{
+    /*position: absolute;*/
+    display: absolute;
+    border: #3C3C3C;          
+    margin-left: 70%; 
+}
+div.contenedor-imagen02{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 2%;
+  padding-top: .8em; 
+}
+div.contenedor-imagen03{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 2%; 
+}
+div.contenedor-imagen04{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 2%;
+  padding-top: .8em;  
+}
+div.contenedor-imagen05{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 2%; 
+}
+
+/*responsivo*/
+@media only screen and (max-width: 700px){
+ 
+  header{
+    margin-left: -6.5em;
+    padding-top: .5em;
+  }
+  header img{
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    margin-left: 30%;
+  }
+  div.contenedor-imagen01{
+    /*position: absolute;*/
+    display: absolute;
+    border: #3C3C3C;          
+    margin-left: 0%; 
+}
+div.contenedor-imagen02{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 20%; 
+}
+div.contenedor-imagen03{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 20%; 
+}
+div.contenedor-imagen04{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 20%; 
+}
+div.contenedor-imagen05{
+  /*position: absolute;*/
+  display: absolute;
+  border: #3C3C3C;          
+  margin-left: 20%; 
+}
+
+}

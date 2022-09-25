@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0a3871; 
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+ul{
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    color: #9da3a2;
+}
+ul > li{
+    display: flex;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: #9da3a2;
+}
+
+#zonaBotonesJuego{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#zonaNuevaPalabra{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#zonaNuevaPalabra > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#zonaNuevaPalabra > form > h4{
+    font-size: 20px;
+    color: #546E7A;
+    margin-bottom: 15px;
+}
+
+#zonaAhorcado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#zonaBotonesAhorcado{
+    margin-top: 6rem;
+    text-align: center;
+}
+
+#contenidoPrincipal{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.btnPrimary{
+    background-color: #17b825;
+    color: #ffff;
+    border-color: #000000;
+}
+.btnSecond{
+    background-color: #0a3871;
+    color: #f3f5fc;
+    border-color: #000000;
+}
+.spam{    
+    margin-top: 8rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    stroke-width: #000000, 20px;
+    text-shadow: rgb(0, 0, 0) 0.1rem 0.1rem 0.1rem;
+}
+.inputText{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    padding-left: 3px;
+    margin-top: 2em;
+}
+.btnSuccess{
+    background-color: #0a3871;
+    color: #f3f5fc;
+    border-color: #000000;
+}
+
+.btnThird{
+    background-color: #a33f3b;
+    color: #f3f5fc;
+    border-color: #000000;
+}
+
+/*responsivo*/
+@media only screen and (max-width: 700px){
+
+    header{
+        background-color: #0a3871; 
+        padding-bottom: 3rem;
+        padding-left: 10rem;
+    }
+}

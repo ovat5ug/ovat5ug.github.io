@@ -96,8 +96,8 @@ div.postik{
 /*responsivo*/
 @media only screen and (max-width: 700px){
   div.postik ul{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 0rem;
 
   }
 

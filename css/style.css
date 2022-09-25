@@ -109,6 +109,11 @@ div img.maniquis{
 
 /*responsivo*/
 @media only screen and (max-width: 700px){
+    body{
+        text-align: center;
+        height: auto;
+        width: auto;
+    }
     #maniqui{
         margin-top: 10rem;
         margin-left: auto;

@@ -1,7 +1,4 @@
-;(function(){
-'use strict'
-
-var palabras = [
+const palabras = [
   'ALURA',
   'NIÑO',
   'AFINIDAD',
@@ -13,6 +10,10 @@ var palabras = [
   'MURCIELAGO',
   'EDUCACION',
 ]
+;(function(){
+'use strict'
+
+
 
 // variable para almacenar la configuracion actual
 var game = null
@@ -83,6 +84,7 @@ function draw(game) {
     $span.appendChild($txt)
     $etiqueta.appendChild($span)
   }
+  
 }
 
 function transcicion(game, letra) {
@@ -141,7 +143,8 @@ window.onkeypress = function transcicionLetra(e) {//capturamos la letra
     setTimeout(fn, 500)
     finalizado = true//finalizado se vuelve verdadero, para que alerta no se muestre otra vez
   }
-  draw(game)
+  draw(game);
+  
 }
 
 window.nuevogame = function nuevogame() {
@@ -161,8 +164,8 @@ window.nuevogame = function nuevogame() {
   game.letras = letras//devuelve las letras que contiene la palabra
   game.restante = letras.size//devuelve el valor de cuantas letras faltan por adivinar
 
-  draw(game)
-  console.log(game)
+  draw(game);
+  console.log(game);
 }
 
 
@@ -179,10 +182,27 @@ function alertaPerdido(palabra) {
   alert('Lo siento estimado, usted perdio... la palabra era: ' + palabra)
 }
 
-nuevogame()
+nuevogame();
+
 
 document.getElementsByClassName("boton2")[0].addEventListener("click", () => {
   location.reload();//renuncia a la partida
 });
+/*document.getElementById("boton4").addEventListener("click", () => {
+  location.reload();//renuncia a la partida
+});*/
 
-}())
+document.getElementById("frmNuevaPalabra").addEventListener("submit", (event) => {
+  event.preventDefault();
+  let nuevaPalabra = document.getElementById("txtNuevaPalabra").value;
+  palabras.push(nuevaPalabra.toUpperCase());
+  document.getElementById("txtNuevaPalabra").value = "";
+  nuevogame(nuevaPalabra.toUpperCase());
+});
+
+document.getElementById("btnNuevaPalabra").addEventListener("click", () => {
+  document.getElementById("zonaBotonesJuego").style.display = "none";
+  document.getElementById("zonaNuevaPalabra").style.display = "";
+});
+
+}());

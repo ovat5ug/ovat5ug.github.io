@@ -6,42 +6,40 @@
     <meta name="viewport" content="width=device-width">
     <title>Juego Ahorcado</title>
     <link rel="stylesheet" href="css/reset.css">  
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logos.css">
     <link rel="stylesheet" href="css/postik.css">
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">   
 </head>
 <body>
-    
     <div class="postik" height="60px" width="60px">
-        <ul>
-            <li>
-              <ah class="a">
-                <h2>CHALLANGE</h2>
-                <p>Reto del Proyecto Alura Latam y Oracle Next Education; Juego de Ahorcado</p>
-              </ah>
-            </li>
-            <li>
-              <ah class="a">
-                <h2>Presentación</h2>
-                <p>Soy Gustavo Pérez, en el presente proyecto expongo la aplicacion del mismo usando CSS3, HTML5 Y JS.</p>
-              </ah>
-            </li>
-            <li>
-              <ah class="a">
-                <h2>Contactos</h2>
-                <p>Puedes encontrarme en:</p>
-                <p><a href="https://www.linkedin.com/in/ovat5ug/">linkedin</a> </p> 
-                <p><a href="https://app.aluracursos.com/user/ovat5ug">Perfil Alura</a></p> 
-                <p><a href="https://github.com/ovat5ug/ORACLE-ONE/tree/main/proyecto_ahorcado">Proyecto GitHub</a> </p> 
-                                           
-              </ah>
-            </li>
-          </ul>
-    </div>
-    <header>
-        
+            <ul>
+                <li>
+                  <ah class="a">
+                    <h2>CHALLANGE</h2>
+                    <p>Reto del Proyecto Alura Latam y Oracle Next Education; Juego de Ahorcado</p>
+                  </ah>
+                </li>
+                <li><!--ul li .a-->
+                  <ah class="a">
+                    <h2>Presentación</h2>
+                    <p>Soy Gustavo Pérez, en el presente proyecto expongo la aplicacion del mismo usando CSS3, HTML5 Y JS.</p>
+                  </ah>
+                </li>
+                <li>
+                  <ah class="a">
+                    <h2>Contactos</h2>
+                    <p>Puedes encontrarme en:</p>
+                    <p><a href="https://www.linkedin.com/in/ovat5ug/">linkedin</a> </p> 
+                    <p><a href="https://app.aluracursos.com/user/ovat5ug">Perfil Alura</a></p> 
+                    <p><a href="https://github.com/ovat5ug/ORACLE-ONE/tree/main/proyecto_encriptar">Proyecto GitHub</a> </p> 
+                                               
+                  </ah>
+                </li>
+              </ul>
+        </div>
+    <header>        
         <div class="contenedor-imagen01" class="contenedor-dimension-imagen">
             <img height="60px" width="60px" src="assets/img/alura-share.png" alt="Logo_Alura"> 
             <br>
@@ -62,33 +60,78 @@
             <img class="" height="60px" width="60px" src="assets/img/LOGO_GUSTAV0_B.png" alt="">
         </div>      
     </header>
+    <content id="contenidoPrincipal" >
+        
+
+        <aside id="zonaJuego" style="display: none;">
+            <div class="maniqui-ahorcado">
+                <img id="maniqui" alt="Ahorcado"/>
+            </div>
+            <div class="adivinado">
+                <!--<span class="letra acertada">A</span>
+                <span class="letra acertada">L</span>
+                <span class="letra acertada">U</span>
+                <span class="letra acertada"></span>
+                <span class="letra acertada"></span>-->
+            </div>
+            <div class="equivocado">
+                <!--<span class="letra equivocada">B</span>
+                <span class="letra equivocada">J</span>
+                <span class="letra equivocada">K</span>
+                <span class="letra equivocada">C</span>-->
+            </div>
+        
+        
+        
+            <form id="zonaBotonesAhorcado" class="botones" action="javascript:void(0)"><!--"javascript:void(0)" el formulario no debe recargarse en la misma pagina por lo que no es enviado a nunguna parte-->
+                <input id="btnNuevoJuego" type="button" class="boton1" value="Nuevo Juego" onclick="nuevogame()"/>
+                <input id="btnSalirJuego" type="button" class="boton2" value="Desistir"/>
+            </form>
+        
+            <!--<div id="zonaBotonesAhorcado">
+                <button  class="btnSuccess">Nuevo Juego</button>
+                <button  class="btnSecond">Salir</button>
+            </div>-->
+        </aside>
+        
+        <section>
+            <aside id="zonaBotonesJuego">
+                <form action="javascript:void(0)">
+                    <!--<input type="button" class="boton1" value="Empezar Juego" onclick="nuevogame()"/>
+                    <input type="button" id="boton4" value="Nueva Palabra"/>-->
+                    <input type="button" id="btnJugar" class="btnPrimary" value="Empezar Juego"/><!---onclick="inicioGame()"-->
+                    <input type="button" id="btnNuevaPalabra" class="btnSecond" value="Nueva Palabra"/>
+
+                </form>
+                
+            </aside>
+            
+            <aside id="zonaNuevaPalabra" style="display: none;">
+                <form id="frmNuevaPalabra" autocomplete="off" action="javascript:void(0)">
+                     <spam class="spam">Agregar nueva palabra al juego</spam>
+                     <br><br>
+                     <div>
+                        <input type="button" id="juegoStar" class="btnPrimary" type="submit" value="Empezar Juego">
+                        <input type="button" id="btnCancelarGuardarPalabra" class="btnThird" value="Cancelar">
+                     </div>
+                     <br><br>
+                     <input type="text" name="CapturaPalabra" class="inputText" id="capPalabra" placeholder="Introdusca sus palabras" size="35">
+                     <input type="button" value="Capturar" class="btnSuccess" type="submit" onclick="guardaPalabra()">
+                
+                    </form>
+             </aside>    
+        </section>
+    </content>
     
-    <div class="maniqui-ahorcado">
-        <img id="maniqui" class="maniquis" alt="Ahorcado"/>
-    </div>
-    <div class="adivinado">
-        <!--<span class="letra acertada">A</span>
-        <span class="letra acertada">L</span>
-        <span class="letra acertada">U</span>
-        <span class="letra acertada"></span>
-        <span class="letra acertada"></span>-->
-    </div>
-    <div class="equivocado">
-        <!--<span class="letra equivocada">B</span>
-        <span class="letra equivocada">J</span>
-        <span class="letra equivocada">K</span>
-        <span class="letra equivocada">C</span>-->
-    </div>
-    <form class="botones" action="javascript:void(0)"><!--"javascript:void(0)" el formulario no debe recargarse en la misma pagina por lo que no es enviado a nunguna parte-->
-        <input type="button" class="boton1" value="Nuevo Juego" onclick="nuevogame()"/>
-        <input type="button" class="boton2" value="Desistir"/>
-    </form>   
+
+    <footer>
+        
+    </footer>
     <script src="js/ahorcado.js"></script><!--si el archivo "js/ahorcado.js" se ubica debajo de la etiqueta body
 genera el siguiente error, "Uncaught TypeError: Cannot set properties of null (setting 'src')"
 basicamente sucede porue no puedes ejecutar un script sin antes haber creado las etiquetas, clases o id
 a la cual estas haciendo referencia que afectara en el "HTML"-->
-
-
-    
+    <script src="js/screenMain.js"></script>
+    <script src="js/capturarPalabra.js"></script>
 </body>
 </html>

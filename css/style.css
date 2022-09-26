@@ -70,13 +70,15 @@ div img.maniquis{
     border-bottom: solid 4px #ffffff;
     margin-left: 0.5rem;
     line-height: 4.5rem;
+    text-shadow: rgb(0, 0, 0) 0.1rem 0.1rem 0.1rem;
 }
 .equivocado{
     text-align: center;
     margin-top: 1rem;
     color: #ffffff;
     font-weight: bold;
-    stroke-width: #242d34, 20px;
+    stroke-width: #242d34, 20px;    
+    text-shadow: rgb(0, 0, 0) 0.1rem 0.1rem 0.1rem;
 }
 .equivocada{
     margin-left: 1rem;
@@ -114,14 +116,29 @@ div img.maniquis{
         height: auto;
         width: auto;
     }
+    aside{
+        margin-left: -1em;
+    }
     #maniqui{
+        margin-left: 6rem;
         margin-top: 10rem;
-        margin-left: auto;
-        margin-right: auto;
-    
+        margin-right: auto;    
         display: flex;
         justify-content: center;
         align-items: center;
         opacity: 60%;
     }
+    .maniqui-ahorcado {
+        margin-top: 1rem;
+        margin-bottom: 12rem;
+    }
+    .adivinado {
+        margin-left: 4rem;
+    }
+    .botones {
+        margin-left: 4rem;
+    }
+    .boton1{
+        margin-bottom: 0.5rem;
+    }    
   }

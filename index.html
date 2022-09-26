@@ -64,21 +64,29 @@
         
 
         <aside id="zonaJuego" style="display: none;">
-            <div class="maniqui-ahorcado">
-                <img id="maniqui" alt="Ahorcado"/>
-            </div>
-            <div class="adivinado">
-                <!--<span class="letra acertada">A</span>
-                <span class="letra acertada">L</span>
-                <span class="letra acertada">U</span>
-                <span class="letra acertada"></span>
-                <span class="letra acertada"></span>-->
-            </div>
-            <div class="equivocado">
-                <!--<span class="letra equivocada">B</span>
-                <span class="letra equivocada">J</span>
-                <span class="letra equivocada">K</span>
-                <span class="letra equivocada">C</span>-->
+            <div id="zonaAhorcado">
+                
+                <div class="maniqui-ahorcado">
+                    <img id="maniqui" alt="Ahorcado"/>
+                </div>
+                <div class="adivinado">
+                    <!--<span class="letra acertada">A</span>
+                    <span class="letra acertada">L</span>
+                    <span class="letra acertada">U</span>
+                    <span class="letra acertada"></span>
+                    <span class="letra acertada"></span>-->
+                </div>
+                <div class="equivocado">
+                    <!--<span class="letra equivocada">B</span>
+                    <span class="letra equivocada">J</span>
+                    <span class="letra equivocada">K</span>
+                    <span class="letra equivocada">C</span>-->
+                </div>
+
+                <div id="contIngresarLetra">
+                    <input type="text" id="txtRecibePalabra" class="inputText" maxlength="0" placeholder="Precione aqui para activar teclado del dispositivo" size="35">                    
+                </div>
+
             </div>
         
         
@@ -95,7 +103,7 @@
         </aside>
         
         <section>
-            <aside id="zonaBotonesJuego">
+            <aside id="zonaBotonesJuego" class="form1">
                 <form action="javascript:void(0)">
                     <!--<input type="button" class="boton1" value="Empezar Juego" onclick="nuevogame()"/>
                     <input type="button" id="boton4" value="Nueva Palabra"/>-->
